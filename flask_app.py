@@ -11,5 +11,5 @@ def index():
 def solve(scramble):
     solution = start_solve(scramble)
     if solution == -1:
-        return Response(status=400, response={'error': 'Invalid scramble'})
-    return Response(status=200, response={'solution': solution[0], 'time': solution[1]})
+        return Response(status=400, response='Invalid scramble')
+    return Response(status=200, response=f"solution: {solution[0]} <br> time: {solution[1]}")

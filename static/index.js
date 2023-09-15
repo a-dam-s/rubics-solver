@@ -79,6 +79,6 @@ function solve() {
     cube[5][1] = one
     cube[5][2] = two
     cube[5][3] = three
-    console.log(cube.toString().replaceAll(",", ""))
-    console.log(cube)
+    scramble = cube.toString().replaceAll(",", "")
+    window.location.replace("http://truet0123.eu.pythonanywhere.com/solve/" + scramble);
 }
