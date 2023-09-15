@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2x2 rubics solver</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</head>
+
+<body style="text-align: center;">
+    <style>
+        td {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background: transparent;
+            background-image: url("background.png");
+            background-size: cover;
+        }
+        div{
+            text-align: center;
+        }
+        table{
+            display: inline-block;
+        }
+    </style>
+    <p>
+        Use keys w,y,g,b,r,o to change colors of the cube.
+        Use backspace to clear the last field.
+        Always enter the side on top.
+    </p>
+    <div>
+        <table>
+            <tr>
+                <td id="c0"></td>
+                <td id="c1"></td>
+            </tr>
+            <tr>
+                <td id="c3"></td>
+                <td id="c2"></td>
+            </tr>
+            </tr>
+        </table>
+        <p id="alert"></p>
+    </div>
+</body>
+
+</html>
