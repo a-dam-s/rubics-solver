@@ -37,6 +37,7 @@ function addColor(color) {
     changeColor(current_field % 4, color)
     current_field += 1
     if (current_field == 24) {
+        console.log(cube)
         solve()
     }
     if (current_field % 4 == 0) {
@@ -70,10 +71,10 @@ function solve() {
     cube[2] = two
     cube[3] = three
     cube[4] = four
-    zero = cube[1]
-    one = cube[3]
-    two = cube[0]
-    three = cube[2]
+    zero = cube[5][1]
+    one = cube[5][2]
+    two = cube[5][3]
+    three = cube[5][0]
     cube[5][0] = zero
     cube[5][1] = one
     cube[5][2] = two
