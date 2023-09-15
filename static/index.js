@@ -42,14 +42,11 @@ function addColor(color) {
     }
     if (current_field % 4 == 0) {
         block = true
-        if (number_of_rotations == 0) {
-            alert = "Rotate the whole cube upwards"
+        if (number_of_rotations == 0 || number_of_rotations == 4) {
+            alert = "Rotate the whole cube upwards <br> <img src='/static/rotate_up.png'>"
         }
         else if (number_of_rotations > 0 && number_of_rotations < 4) {
-            alert = "Rotate the whole cube to the left."
-        }
-        else if (number_of_rotations == 4) {
-            alert = "Rotate the whole cube upwards"
+            alert = "Rotate the whole cube to the left. <br> <img src='/static/rotate_left.png'>"
         }
         else{
             $("#alert").html(alert + "<h3>Calculating...</h3>")
