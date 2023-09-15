@@ -1,8 +1,7 @@
-from utils import *
+from utils_fast import *
 from typing import List, Dict
 from collections import deque
 from time import time
-import cProfile
 
 def find_solution(scramble: int) -> List[int]:
     queue_1 = deque()
@@ -80,21 +79,13 @@ def find_solution(scramble: int) -> List[int]:
     readable = ""
     for s in solution:
         readable += MOVE_MAP[s] + " "
-    print(readable)
-    return solution
+    # print(readable)
+    return readable
 
-if __name__ == "__main__":
-    #start_position = convert_colors_to_code("wwwwggggrryrbbbrooooybyy")
-    #start_position = convert_colors_to_code("wwwwboooggggrbrrorbbyyyy")
-    #start_position = convert_colors_to_code("brrgwwbooygrbwgygobrwoyy")
-
-    start_position = convert_colors_to_code(input("Input your scramble: "))
-
-    #print(bin(start_position))
+def start_solve(scramble: str) -> str:
+    start_position = convert_colors_to_code(scramble)
     if start_position == -1:
-        print("invalid scramble")
-        exit(1)
+        return -1
     start = time()
-    #cProfile.run("find_solution(start_position)")
-    find_solution(start_position)
-    print(time()-start)
+    solution = find_solution(start_position)
+    return (solution, time() - start)

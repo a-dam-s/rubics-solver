@@ -43,13 +43,13 @@ function addColor(color) {
     if (current_field % 4 == 0) {
         block = true
         if (number_of_rotations == 0) {
-            alert = "Rotate the cube upwards"
+            alert = "Rotate the whole cube upwards"
         }
         else if (number_of_rotations > 0 && number_of_rotations < 4) {
-            alert = "Rotate the cube to the right"
+            alert = "Rotate the whole cube to the left."
         }
         else if (number_of_rotations == 4) {
-            alert = "Rotate the cube upwards"
+            alert = "Rotate the whole cube upwards"
         }
         $("#alert").html(alert + "<br>Press enter to continue")
     }
