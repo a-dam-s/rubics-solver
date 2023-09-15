@@ -51,6 +51,10 @@ function addColor(color) {
         else if (number_of_rotations == 4) {
             alert = "Rotate the whole cube upwards"
         }
+        else{
+            $("#alert").html(alert + "<h3>Calculating...</h3>")
+            return
+        }
         $("#alert").html(alert + "<br>Press enter to continue")
     }
 }
@@ -61,8 +65,6 @@ function changeColor(field, color) {
 
 function solve() {
     console.log(cube)
-    // [cube[2], cube[3], cube[4], cube[1]] = cube[1], [cube[2], cube[3], cube[4]]
-    // [cube[5][0], cube[5][1], cube[5][2], cube[5][3]] = [cube[5][1], cube[5][3], cube[5][0], cube[5][2]]
     two = cube[1]
     three = cube[2]
     four = cube[3]
