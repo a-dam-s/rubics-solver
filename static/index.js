@@ -3,8 +3,15 @@ let current_field = 0
 let block = false
 let number_of_rotations = 0
 let cube = [[], [], [], [], [], []]
-
-$(document).keydown(function (e) {
+$(() => {
+let asd
+if (window.mobileAndTabletCheck()){
+     asd = document.getElementById("getKeyboard")
+}
+else{
+    asd = document
+}
+$(asd).keydown(function (e) {
     let key = e.key.toLowerCase()
     console.log(key)
     if (['w', 'y', 'b', 'g', 'r', 'o'].includes(key) && !block) {
@@ -80,4 +87,4 @@ function solve() {
     cube[5][3] = three
     scramble = cube.toString().replaceAll(",", "")
     window.location.replace("http://truet0123.eu.pythonanywhere.com/solve/" + scramble);
-}
+}})

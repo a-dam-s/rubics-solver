@@ -8,6 +8,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="/static/index.js"></script>
+    <script src="/static/mobile_keyboard.js"></script>
+    <script src="mobile_keyboard.js"></script>
 </head>
 
 <body style="text-align: center;">
@@ -27,11 +29,12 @@
             display: inline-block;
         }
     </style>
-    <p>
+    <p id="tutorial">
         Use keys w,y,g,b,r,o to change colors of the cube.
         Use backspace to clear the last field.
         Always enter the side on top.
     </p>
+    <input type="text" hidden id="getKeyboard" placeholder="Click here to get keyboard">
     <div>
         <table>
             <tr>
