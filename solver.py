@@ -3,6 +3,7 @@ from typing import List, Dict
 from collections import deque
 from time import time
 
+
 def find_solution(scramble: int) -> List[int]:
     queue_1 = deque()
     queue_1.append(scramble)
@@ -61,7 +62,6 @@ def find_solution(scramble: int) -> List[int]:
                 tmp += 1
         added_in_last_2 = tmp
 
-    
     solution: List[int] = []
     where_are_we = current
     while where_are_we != scramble:
@@ -81,6 +81,7 @@ def find_solution(scramble: int) -> List[int]:
         readable += MOVE_MAP[s] + " "
     # print(readable)
     return readable
+
 
 def start_solve(scramble: str) -> str:
     start_position = convert_colors_to_code(scramble)
